@@ -1,18 +1,15 @@
 /* Basic reset */
 * {
-	overflow: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-html {
+html{
   background: linear-gradient(135deg, #081c92 0%, #6e02b1 100%);
 }
 
 /* Body styling */
 body {
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,12 +18,12 @@ body {
   color: #ff4b4b;
 }
 
-.wrapper {
-  z-index: 100;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.wrapper{
+	z-index: 100;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Card styling */
@@ -41,7 +38,7 @@ body {
 }
 
 .card h1 {
-  color: #da3737;
+	color: #da3737;
   font-size: 2.5em;
   margin-bottom: 10px;
 }
@@ -70,10 +67,10 @@ body {
 }
 
 .bottom-right {
-  position: absolute;
-  transform: translateX(50%) translateY(50%);
-  bottom: 3%;
-  right: 8%;
+	position: absolute;
+	transform: translateX(50%) translateY(50%);
+	bottom: 3%;
+	right: 8%;
 }
 
 @keyframes beat {
@@ -86,42 +83,3 @@ body {
   }
 }
 
-canvas {
-  position: absolute;
-}
-
-.heart {
-  z-index: 101;
-  position: absolute;
-  font-size: 50px; /* Size of the heart */
-  cursor: pointer; /* Change cursor to pointer */
-  transition: left 0.2s ease, top 0.2s ease, transform 0.2s ease; /* Smooth transition for movement */
-}
-
-/* Fallback for linear-gradient for older browsers */
-html {
-  background: #6e02b1; /* Fallback color for browsers that do not support gradients */
-}
-
-/* Vendor prefixes for animations (for older versions of browsers) */
-@-webkit-keyframes beat {
-  0%,
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-}
-
-@keyframes beat {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
