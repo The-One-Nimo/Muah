@@ -1,5 +1,5 @@
 // Set the date when you met
-const meetDate = new Date("2024-04-16T12:57:00"); // Update this date and time
+const meetDate = new Date("2024-04-16T00:57:00"); // Update this date and time
 
 // Function to calculate time since meet date
 function calculateTime() {
