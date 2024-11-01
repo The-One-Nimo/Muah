@@ -1,0 +1,80 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #081c92 0%, #6e02b1 100%);
+  font-family: "Arial", sans-serif;
+  color: #ff4b4b;
+}
+
+.wrapper{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Card styling */
+.card {
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  max-width: 350px;
+  width: 90%;
+}
+
+.card h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.counter {
+  font-size: 1.5em;
+  color: #ff6b6b;
+}
+
+.message {
+  font-size: 1.1em;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Heart animation */
+.heart {
+  color: #ff4b4b;
+  font-size: 2em;
+  animation: beat 1s infinite;
+}
+
+.bottom-right {
+	position: absolute;
+	transform: translateX(50%) translateY(50%);
+	bottom: 3%;
+	right: 8%;
+}
+
+@keyframes beat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
