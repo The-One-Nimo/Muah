@@ -10,7 +10,6 @@ html{
 
 /* Body styling */
 body {
-	overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
