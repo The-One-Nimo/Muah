@@ -25,7 +25,7 @@ class Raindrop {
     }
 
     draw() {
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)'; // White color for raindrops
+        ctx.strokeStyle = 'rgba(173, 4, 4, 0.6)'; // White color for raindrops
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(this.x, this.y);
