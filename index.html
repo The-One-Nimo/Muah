@@ -2,33 +2,126 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./src/pumpum.png">
-    <title>Our Love Story ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#2d0f4a" />
+    <meta name="description" content="A little corner of the internet, made for Misa by Nimo." />
+    <title>For Misa ♡ from Nimo</title>
+    <link rel="icon" type="image/svg+xml" href="./src/favicon.svg" />
 
-    <link rel="stylesheet" href="./css/styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Quicksand:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
-    <canvas id="rainCanvas"></canvas>
-    <div class="wrapper">
-      <div class="card">
-        <div class="heart"></div>
-        <h1>I Love You <span class="heartbeat">❤</span></h1>
-        <p class="counter-text">We've been together for</p>
-        <div class="counter" id="timeCounter">Loading...</div>
-        <p class="message">And every moment gets better ❤️</p>
-        <div class="kuromi" id="pumpum">
-          <div id="message-bubble">
-            <img src="./src/message-bubble-removebg-preview.png" alt="message bubble" class="message-img">
-            <div class="message">Hello... Is this working ?</div>
-          </div>
-          <img src="./src/pumpum.png" alt="kuromi"width="120" />
-        </div>
-      </div>
+    <!-- Night sky: gradient, aurora glow, moon -->
+    <div class="sky" aria-hidden="true">
+      <div class="aurora a1"></div>
+      <div class="aurora a2"></div>
+      <div class="aurora a3"></div>
+      <div class="moon"></div>
     </div>
-    <script src="./js2/rain.js"></script>
-    <script src="./js2/time.js"></script>
-    <script src="./js2/pumpum.js"></script>
+    <!-- Stars, petals, hearts, rain -->
+    <canvas id="fx" aria-hidden="true"></canvas>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="top">
+        <p class="eyebrow reveal">made with love for</p>
+        <h1 class="name reveal" id="herName">Misa</h1>
+        <p class="tagline reveal">
+          I love you <span class="heartbeat" aria-hidden="true">❤</span>
+        </p>
+
+        <div class="counter-card reveal" id="counterCard">
+          <!-- Mascot -->
+          <div class="mascot" id="mascot">
+            <div class="bubble" id="bubble" role="status" aria-live="polite">
+              <span id="bubbleText">Hello Misa!</span>
+            </div>
+            <div class="mascot-hop">
+              <img src="./src/pumpum.png" alt="Our little mascot" width="110" draggable="false" />
+            </div>
+          </div>
+
+          <p class="counter-title">We've been together for</p>
+
+          <div class="tiles" id="tiles" aria-live="off">
+            <div class="tile"><span class="num" data-u="years">0</span><span class="lbl" data-l="years">years</span></div>
+            <div class="tile"><span class="num" data-u="months">0</span><span class="lbl" data-l="months">months</span></div>
+            <div class="tile"><span class="num" data-u="days">0</span><span class="lbl" data-l="days">days</span></div>
+            <div class="tile"><span class="num" data-u="hours">00</span><span class="lbl" data-l="hours">hours</span></div>
+            <div class="tile"><span class="num" data-u="minutes">00</span><span class="lbl" data-l="minutes">minutes</span></div>
+            <div class="tile accent"><span class="num" data-u="seconds">00</span><span class="lbl" data-l="seconds">seconds</span></div>
+          </div>
+
+          <p class="counter-sub" id="totalDays">&nbsp;</p>
+          <p class="pill" id="nextAnniversary">&nbsp;</p>
+          <p class="counter-foot">and every moment gets better ❤️</p>
+        </div>
+
+        <a class="scroll-hint" href="#reasons" aria-label="Scroll down">
+          <span>scroll</span>
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+        </a>
+      </section>
+
+      <!-- ============ REASONS ============ -->
+      <section class="section" id="reasons">
+        <header class="section-head reveal">
+          <span class="script">a few of</span>
+          <h2>Things I love about you</h2>
+          <div class="ornament" aria-hidden="true"></div>
+        </header>
+        <div class="grid" id="reasonGrid"></div>
+      </section>
+
+      <!-- ============ GALLERY ============ -->
+      <section class="section" id="gallery" hidden>
+        <header class="section-head reveal">
+          <span class="script">our little</span>
+          <h2>Memories</h2>
+          <div class="ornament" aria-hidden="true"></div>
+        </header>
+        <div class="polaroids" id="polaroids"></div>
+      </section>
+
+      <!-- ============ LETTER ============ -->
+      <section class="section" id="letter">
+        <header class="section-head reveal">
+          <span class="script">one more thing</span>
+          <h2>A letter for you</h2>
+          <div class="ornament" aria-hidden="true"></div>
+        </header>
+        <article class="paper reveal" id="paper">
+          <div class="seal" aria-hidden="true">♥</div>
+          <p class="dear" id="dear">My dearest Misa,</p>
+          <div class="letter-body" id="letterBody"></div>
+          <p class="signature" id="signature"></p>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <p>Made with <span class="heartbeat" aria-hidden="true">❤</span> by <span id="himName">Nimo</span> for <span id="herName2">Misa</span></p>
+        <p class="tiny">psst… tap anywhere for a little surprise ✨</p>
+      </footer>
+    </main>
+
+    <!-- Rain toggle (inside joke) -->
+    <button class="fab" id="rainBtn" type="button" aria-pressed="false" aria-label="Toggle the blood rain" title="The rain is blood 🩸">
+      <span aria-hidden="true">🌧️</span>
+    </button>
+
+    <noscript><p style="position:relative;z-index:5;text-align:center;color:#fff">Turn on JavaScript to see Misa's page ❤️</p></noscript>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/counter.js"></script>
+    <script src="./js/mascot.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
