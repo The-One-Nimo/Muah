@@ -43,9 +43,9 @@ window.LOVE = {
 
   // The letter, one string per paragraph. Rewrite it in your own words!
   letter: [
-    "Misa, I never know how to say all of this out loud, so I built you a little corner of the internet instead.",
-    "Thank you for every laugh, every late night, every silly message and every time you made me feel like the luckiest person alive.",
+    "Hbiba diali, I never know how to say all of this out loud, so I built you a little corner of the internet instead.",
+    "Thank you for every smile, every late night, every silly message and every time you made me feel like the luckiest person alive.",
     "Whatever tomorrow looks like, I hope it has you in it. I'll keep counting, I promise. 🤍",
   ],
-  signature: "Forever yours, Nimo",
+  signature: "Knbghik, Nimo",
 };
